@@ -5,10 +5,12 @@
   "devDependencies": {
     "electron": "^1.7.9",
     "electron-builder": "^20.22.0",
+    "electron-rebuild": "^1.8.1",
     "foreman": "^2.0.0",
     "react-scripts": "0.8.5"
   },
   "dependencies": {
+    "node-hid": "^0.7.3",
     "react": "^16.1.1",
     "react-dom": "^16.1.1"
   },
@@ -24,7 +26,8 @@
     "electron-start": "node src/electron-wait-react",
     "react-start": "react-scripts start",
     "pack": "build --dir",
-    "dist": "npm run build && build"
+    "dist": "npm run build && build",
+    "postinstall": "electron-rebuild --force"
   },
   "build": {
     "extends": null,
